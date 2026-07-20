@@ -1,0 +1,6 @@
+dist/
+UPLOAD-THIS-TO-CLOUDFLARE/
+UPLOAD-THIS-TO-CLOUDFLARE.zip
+.DS_Store
+assets/images/*
+!assets/images/*-clean.jpg

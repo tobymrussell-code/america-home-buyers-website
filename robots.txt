@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://americahomebuyersnc.com/sitemap.xml
