@@ -15,17 +15,55 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "America Home Buyers LLC",
-    "url": "https://americahomebuyersnc.com/",
-    "email": "nchomebuying@gmail.com",
-    "telephone": "+1-336-701-2230",
-    "founder": {"@type": "Person", "name": "Toby Russell"},
-    "contactPoint": {"@type": "ContactPoint", "telephone": "+1-336-701-2230", "contactType": "sales", "areaServed": "US-NC"},
-    "areaServed": ["Winston-Salem NC", "Greensboro NC", "High Point NC", "Thomasville NC", "Lexington NC", "Triad NC"],
-    "description": "A North Carolina home-buying company helping homeowners compare as-is cash offers with traditional selling options.",
-    "image": "https://americahomebuyersnc.com/assets/logo/america-home-buyers-logo-large.png",
-    "priceRange": "$$"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://americahomebuyersnc.com/#organization",
+        "name": "America Home Buyers LLC",
+        "url": "https://americahomebuyersnc.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://americahomebuyersnc.com/assets/logo/america-home-buyers-logo-large.png"
+        },
+        "image": "https://americahomebuyersnc.com/assets/logo/america-home-buyers-logo-large.png",
+        "email": "nchomebuying@gmail.com",
+        "telephone": "+1-336-701-2230",
+        "founder": {"@type": "Person", "name": "Toby Russell"},
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-336-701-2230",
+          "contactType": "sales",
+          "areaServed": "US-NC",
+          "availableLanguage": "English"
+        },
+        "areaServed": [
+          {"@type": "Place", "name": "Triad, North Carolina"},
+          {"@type": "AdministrativeArea", "name": "Davidson County, North Carolina"},
+          {"@type": "AdministrativeArea", "name": "Forsyth County, North Carolina"},
+          {"@type": "AdministrativeArea", "name": "Guilford County, North Carolina"},
+          {"@type": "AdministrativeArea", "name": "Randolph County, North Carolina"}
+        ],
+        "sameAs": ["https://share.google/mEaXz7iDvZvZ3tmnn"],
+        "description": "A North Carolina home-buying company helping homeowners compare as-is cash offers with traditional selling options."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://americahomebuyersnc.com/#website",
+        "url": "https://americahomebuyersnc.com/",
+        "name": "America Home Buyers LLC",
+        "publisher": {"@id": "https://americahomebuyersnc.com/#organization"},
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://americahomebuyersnc.com/#webpage",
+        "url": "https://americahomebuyersnc.com/",
+        "name": "Sell Your House As-Is in the Triad NC | America Home Buyers LLC",
+        "isPartOf": {"@id": "https://americahomebuyersnc.com/#website"},
+        "about": {"@id": "https://americahomebuyersnc.com/#organization"},
+        "inLanguage": "en-US"
+      }
+    ]
   }
   </script>
 </head>

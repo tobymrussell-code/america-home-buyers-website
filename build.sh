@@ -4,7 +4,7 @@ set -eu
 rm -rf dist
 mkdir -p dist/assets/images dist/assets/logo dist/blog
 
-cp ./*.html ./styles.css ./script.js ./robots.txt ./sitemap.xml ./llms.txt ./_headers ./_redirects dist/
+cp ./*.html ./styles.css ./script.js ./robots.txt ./sitemap.xml ./llms.txt ./_headers ./_redirects ./6b72435b05797d0873018c1731b2686e.txt dist/
 cp ./assets/logo/america-home-buyers-logo.png ./assets/logo/america-home-buyers-logo-large.png dist/assets/logo/
 cp ./assets/images/*-clean.jpg dist/assets/images/
 
