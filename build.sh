@@ -20,6 +20,9 @@ for directory in \
   sell-my-house-fast-lexington-nc \
   sell-my-house-fast-winston-salem-nc \
   sell-rental-property-with-tenants-nc \
+  we-buy-houses-davidson-county-nc \
+  we-buy-houses-wallburg-nc \
+  we-buy-houses-welcome-nc \
   we-buy-houses-archdale-nc \
   we-buy-houses-greensboro-nc \
   we-buy-houses-thomasville-nc
