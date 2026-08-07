@@ -14,6 +14,9 @@ for directory in \
   can-i-sell-house-as-is-nc \
   how-fast-can-cash-buyer-close-nc \
   sell-a-house-that-needs-repairs-nc \
+  sell-house-before-foreclosure-nc \
+  sell-house-in-probate-nc \
+  sell-house-with-liens-or-back-taxes-nc \
   sell-inherited-house-nc \
   sell-my-house-fast-asheboro-nc \
   sell-my-house-fast-kernersville-nc \
