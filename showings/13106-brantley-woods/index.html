@@ -54,13 +54,14 @@ footer{text-align:center;color:var(--muted);font-size:12px;margin-top:18px}
       <div class="city">Zebulon, NC 27597</div>
     </section>
     <section class="content">
-      <div class="notice"><strong>How this works:</strong> Choose your requested showing time and provide your agent information. You will receive confirmation before the appointment is considered approved. Access instructions are provided only after confirmation.</div>
+      <div class="notice"><strong>How this works:</strong> Choose your requested showing time and provide your agent information. Toby is notified immediately. After you submit, a confirmation email is sent to the email address you enter with the current showing instructions.</div>
 
-      <form action="https://formsubmit.co/nchomebuying@gmail.com" method="POST">
+      <form action="https://formsubmit.co/tobymrussell@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="Showing Request - 13106 Brantley Woods Rd">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="Property" value="13106 Brantley Woods Rd, Zebulon, NC 27597">
         <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_autoresponse" value="Your showing request for 13106 Brantley Woods Rd, Zebulon, NC 27597 has been received. SHOWING INSTRUCTIONS: Please arrive only during your requested showing window. Do not share property access information with buyers or unlicensed parties. Secure all exterior doors when leaving, turn off any lights you turned on, and leave the property as you found it. Please provide feedback after your showing. IMPORTANT: Any lockbox, gate, alarm, or other private access details will be provided only through the approved access process and should not be forwarded or shared. Listing contact: Toby Russell, NorthGroup Real Estate.">
 
         <div class="grid">
           <div><label for="date">Requested Date *</label><input id="date" name="Requested Date" type="date" required></div>
@@ -74,7 +75,7 @@ footer{text-align:center;color:var(--muted);font-size:12px;margin-top:18px}
 
         <div class="grid">
           <div><label for="phone">Cell Phone *</label><input id="phone" name="Cell Phone" type="tel" autocomplete="tel" required></div>
-          <div><label for="email">Email *</label><input id="email" name="Email" type="email" autocomplete="email" required></div>
+          <div><label for="email">Email *</label><input id="email" name="email" type="email" autocomplete="email" required></div>
         </div>
 
         <div class="grid">
@@ -85,13 +86,13 @@ footer{text-align:center;color:var(--muted);font-size:12px;margin-top:18px}
         <div><label for="notes">Notes</label><textarea id="notes" name="Notes" placeholder="Anything the listing agent should know?"></textarea></div>
 
         <button type="submit">Request Showing →</button>
-        <div class="small">Submitting this form is a request, not automatic confirmation. Do not enter or share lockbox, alarm, gate, or other access codes here.</div>
+        <div class="small">A copy of the showing instructions will be emailed to the agent after submission. Private access codes are never displayed on this page.</div>
       </form>
 
       <div class="steps">
         <div class="step"><b>1. Request</b>Select the date and time that works for your client.</div>
-        <div class="step"><b>2. Confirm</b>Watch for confirmation before arriving at the property.</div>
-        <div class="step"><b>3. Access</b>Showing/access instructions are sent after confirmation.</div>
+        <div class="step"><b>2. Email</b>Check your email for the showing instructions after submitting.</div>
+        <div class="step"><b>3. Show</b>Follow the access and property-security instructions provided.</div>
       </div>
     </section>
   </main>
