@@ -1098,3 +1098,19 @@ th {
     padding-bottom: 56px;
   }
 }
+
+/* Validated seller forms retain the site's existing type, colors and controls. */
+.ahb-lead-form { width: 100%; gap: 10px; }
+.ahb-field { display: grid; gap: 4px; min-width: 0; }
+.ahb-name-row, .ahb-location-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.ahb-field-error { color: #9d1b1b; font-size: 12px; }
+.ahb-lead-form [aria-invalid="true"] { border-color: #9d1b1b; }
+.ahb-lead-form .ahb-form-help { font-size: 13px; color: #555; margin: 0; }
+.ahb-address-lookup, .ahb-address-match { font: inherit; cursor: pointer; padding: 10px; background: #fff; border: 2px solid #d9d2ac; text-align: left; color: #151515; }
+.ahb-address-match { display: block; width: 100%; margin-bottom: 6px; }
+.ahb-address-lookup:focus-visible, .ahb-address-match:focus-visible { outline: 3px solid #ffd400; }
+.ahb-lead-form .ahb-form-status { font-size: 14px; font-weight: 700; margin: 0; }
+.ahb-lead-form .ahb-security-note { font-size: 11px; color: #666; margin: 0; }
+.ahb-honeypot { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+.ahb-lead-form button:disabled { opacity: .65; cursor: wait; }
+@media (max-width: 380px) { .ahb-name-row { grid-template-columns: 1fr; } }

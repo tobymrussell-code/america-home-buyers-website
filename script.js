@@ -191,3 +191,15 @@ window.addEventListener("hs-form-event:on-submission:success", (event) => {
     window.location.assign("/thank-you.html");
   }, 700);
 });
+
+// Only emitted after the validation server confirms HubSpot accepted the submission.
+window.addEventListener('ahb:lead-confirmed', (event) => {
+  const { submissionId, email, phone } = event.detail || {};
+  if (!submissionId || measuredSubmissions.has(submissionId)) return;
+  measuredSubmissions.add(submissionId);
+  const parameters = {hubspot_form_id: HUBSPOT_OFFER_FORM_ID, page_path: location.pathname, method: 'validated_form'};
+  trackEvent('ahb_lead_submitted', parameters);
+  trackEvent('generate_lead', parameters);
+  const adapter = {getFieldValue: async name => name === '0-1/email' ? email : '+1' + phone};
+  void measureConfirmedLead(adapter, submissionId);
+});
