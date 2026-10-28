@@ -37,7 +37,7 @@ function setup(host,index){
   form.innerHTML=`${input('phone','Phone number','tel',true,'tel-national')}
     ${input('street','Property address or parcel / road description','text',true,'off')}
     <div class="ahb-location-row">${input('city','City or nearest town','text',true,'off')}
-    <div class="ahb-field"><label for="${prefix}-state">State *</label><select id="${prefix}-state" name="state" required aria-describedby="${prefix}-state-error"><option value="">Choose state</option>${STATES.map(s=>`<option value="${s}">${s}</option>`).join('')}</select><span class="ahb-field-error" id="${prefix}-state-error" data-error="state"></span></div></div>
+    <div class="ahb-field"><label for="${prefix}-state">State *</label><select id="${prefix}-state" name="state" required aria-describedby="${prefix}-state-error"><option value="">Select</option>${STATES.map(s=>`<option value="${s}">${s}</option>`).join('')}</select><span class="ahb-field-error" id="${prefix}-state-error" data-error="state"></span></div></div>
     <button class="ahb-address-lookup" type="button">Find address (optional)</button>
     <p class="ahb-form-help" data-lookup-status role="status">Rural property or vacant land? Enter a road or parcel description, city and state. Address lookup is optional.</p>
     <div data-address-matches></div>

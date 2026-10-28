@@ -1170,3 +1170,13 @@ html { scroll-padding-top: 124px; }
   .ahb-lead-form input, .ahb-lead-form select { scroll-margin-bottom: 130px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+@media (max-width: 560px) {
+  .hero-grid > div:first-child { display: flex; flex-direction: column; }
+  .hero-grid > div:first-child > .eyebrow { order: 0; }
+  .hero-grid > div:first-child > h1 { order: 1; }
+  .hero-grid > div:first-child > .hero-actions { order: 2; margin-top: 20px; margin-bottom: 4px; }
+  .hero-grid > div:first-child > p:not(.eyebrow) { order: 3; }
+  .hero-grid > div:first-child > .hero-proof { order: 4; margin-top: 2px; }
+  .hero-grid .hero-actions a[href^="tel:"] { display: none; }
+}
