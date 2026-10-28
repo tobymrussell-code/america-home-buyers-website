@@ -203,3 +203,12 @@ window.addEventListener('ahb:lead-confirmed', (event) => {
   const adapter = {getFieldValue: async name => name === '0-1/email' ? email : '+1' + phone};
   void measureConfirmedLead(adapter, submissionId);
 });
+
+// Keep campaign attribution when a visitor moves from an informational page to a form.
+(() => {
+  const keys=['utm_source','utm_medium','utm_campaign','utm_term','utm_content','utm_id','gclid','gbraid','wbraid','msclkid','fbclid','ttclid','oppref'];
+  const query=new URLSearchParams(location.search);
+  const incoming=Object.fromEntries(keys.filter(k=>query.get(k)).map(k=>[k,query.get(k).slice(0,250)]));
+  if(!Object.keys(incoming).length)return;
+  try {const saved=JSON.parse(sessionStorage.getItem('ahb-attribution')||'{}');sessionStorage.setItem('ahb-attribution',JSON.stringify({...saved,...incoming}));} catch {}
+})();
