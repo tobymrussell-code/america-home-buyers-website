@@ -22,6 +22,7 @@ function field(form,name){return form.elements.namedItem(name);}
 function errors(form,values){
   for(const name of ['phone','street','city','state','zip','email']){
     const input=field(form,name),error=form.querySelector(`[data-error="${name}"]`);
+    if(values[name] && input.closest('details'))input.closest('details').open=true;
     input.setCustomValidity(values[name]||'');input.setAttribute('aria-invalid',values[name]?'true':'false');error.textContent=values[name]||'';
   }
 }
@@ -33,20 +34,20 @@ function setup(host,index){
   const form=document.createElement('form');form.className='ahb-lead-form hs-do-not-collect';form.dataset.hsDoNotCollect='true';
   form.setAttribute('aria-label','Request an as-is offer');form.noValidate=true;
   const input=(name,label,type='text',required=false,autocomplete='off')=>`<div class="ahb-field"><label for="${prefix}-${name}">${label}${required?' *':''}</label><input id="${prefix}-${name}" name="${name}" type="${type}" ${required?'required':''} autocomplete="${autocomplete}" aria-describedby="${prefix}-${name}-error"><span class="ahb-field-error" id="${prefix}-${name}-error" data-error="${name}"></span></div>`;
-  form.innerHTML=`<div class="ahb-name-row">${input('firstname','First name','text',false,'given-name')}${input('lastname','Last name','text',false,'family-name')}</div>
-    ${input('email','Email (optional)','email',false,'email')}
-    ${input('phone','Phone number','tel',true,'tel-national')}
-    <p class="ahb-form-help">Property in Thomasville, Lexington, Davidson County, or nearby Triad communities? Enter its location below.</p>
+  form.innerHTML=`${input('phone','Phone number','tel',true,'tel-national')}
     ${input('street','Property address or parcel / road description','text',true,'off')}
-    <button class="ahb-address-lookup" type="button">Look up this address</button>
-    <p class="ahb-form-help" data-lookup-status role="status">Include the city and state for a better match, or enter them below. Rural property or vacant land? Manual entry is always available.</p>
-    <div data-address-matches></div>
     <div class="ahb-location-row">${input('city','City or nearest town','text',true,'off')}
     <div class="ahb-field"><label for="${prefix}-state">State *</label><select id="${prefix}-state" name="state" required aria-describedby="${prefix}-state-error"><option value="">Choose state</option>${STATES.map(s=>`<option value="${s}">${s}</option>`).join('')}</select><span class="ahb-field-error" id="${prefix}-state-error" data-error="state"></span></div></div>
-    ${input('zip','ZIP code (optional)','text',false,'off')}
+    <button class="ahb-address-lookup" type="button">Find address (optional)</button>
+    <p class="ahb-form-help" data-lookup-status role="status">Rural property or vacant land? Enter a road or parcel description, city and state. Address lookup is optional.</p>
+    <div data-address-matches></div>
+    <details class="ahb-optional-fields"><summary>Add name, email or ZIP (optional)</summary><div class="ahb-optional-content">
+    <div class="ahb-name-row">${input('firstname','First name','text',false,'given-name')}${input('lastname','Last name','text',false,'family-name')}</div>
+    ${input('email','Email (optional)','email',false,'email')}${input('zip','ZIP code (optional)','text',false,'off')}</div></details>
     <div class="ahb-honeypot" aria-hidden="true"><label for="${prefix}-company">Leave this field empty</label><input id="${prefix}-company" name="companyWebsite" type="text" tabindex="-1" autocomplete="off"></div>
     <div data-turnstile></div><p class="ahb-form-status" role="status" aria-live="polite"></p>
     <button class="button yellow" type="submit">Get My Offer</button>
+    <p class="ahb-security-note">No obligation to sell. <a href="/privacy.html">Your privacy</a>.</p>
     <p class="ahb-security-note">Protected by Cloudflare Turnstile. <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Privacy</a> · <a href="https://www.cloudflare.com/website-terms/" target="_blank" rel="noopener">Terms</a></p>`;
   host.replaceChildren(form);
   const phone=field(form,'phone');phone.inputMode='tel';phone.maxLength=18;phone.addEventListener('input',()=>{phone.value=formatPhone(phone.value);phone.setCustomValidity('');});

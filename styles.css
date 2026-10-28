@@ -1114,3 +1114,59 @@ th {
 .ahb-honeypot { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
 .ahb-lead-form button:disabled { opacity: .65; cursor: wait; }
 @media (max-width: 380px) { .ahb-name-row { grid-template-columns: 1fr; } }
+
+/* Lead capture: compact first screen, clear form priority, accessible local navigation. */
+html { scroll-padding-top: 124px; }
+.logo-tile { width: 150px; height: 88px; }
+.brand { min-width: 150px; }
+.hero-grid { align-items: start; padding-top: 32px; }
+.hero-grid h1 { font-size: clamp(36px, 4vw, 54px); line-height: 1.08; }
+.hero-grid > div:first-child { padding-top: 10px; }
+.hero-grid .eyebrow { font-size: 13px; }
+.hero-grid > div:first-child > p:not(.eyebrow) { font-size: 18px; }
+.ahb-lead-form input, .ahb-lead-form select, .ahb-lead-form button { font-size: 16px; }
+.ahb-lead-form .ahb-location-row { grid-template-columns: minmax(0, 1fr) 120px; }
+.ahb-lead-form .ahb-address-lookup { justify-self: start; min-height: 44px; border: 0; padding: 8px 0; text-decoration: underline; font-size: 14px; font-weight: 700; }
+.ahb-lead-form .ahb-optional-fields { background: #fffdf3; border: 1px solid var(--line); padding: 0 12px; }
+.ahb-optional-fields summary { cursor: pointer; min-height: 44px; padding: 10px 0; font-size: 14px; font-weight: 700; }
+.ahb-optional-content { display: grid; gap: 10px; padding-bottom: 12px; }
+.ahb-lead-form button[type="submit"] { width: 100%; min-height: 52px; cursor: pointer; }
+.ahb-lead-form .ahb-form-status:empty, .ahb-field-error:empty { display: none; }
+.ahb-lead-form :is(input,select,button,summary):focus-visible, a:focus-visible { outline: 3px solid #916a00; outline-offset: 3px; }
+.contact-page .page-hero .section { padding-top: 30px; padding-bottom: 30px; }
+.contact-page .page-hero h1 { font-size: clamp(36px, 4vw, 54px); }
+.contact-page .grid-2 { align-items: start; }
+.contact-page .photo-frame { height: auto; min-height: 0; max-height: 420px; object-fit: cover; }
+.mobile-site-menu { display: none; }
+@media (max-width: 900px) and (min-width: 761px) {
+  .nav-wrap { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+}
+@media (max-width: 760px) {
+  html { scroll-padding-top: 100px; }
+  .nav-wrap { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 12px; }
+  .brand { min-width: 0; }
+  .logo-tile { width: 104px; height: 60px; padding: 4px; border-width: 2px; }
+  .nav-links { margin-left: auto; }
+  .nav-links a:not(.phone-link) { display: none; }
+  .nav-links .phone-link { font-size: 12px; padding: 9px 8px; white-space: nowrap; }
+  .mobile-site-menu { display: block; color: #fff; }
+  .mobile-site-menu > summary { display: flex; align-items: center; min-height: 44px; cursor: pointer; font-size: 13px; font-weight: 700; list-style: none; }
+  .mobile-site-menu > summary::-webkit-details-marker { display: none; }
+  .mobile-site-menu > nav { position: absolute; top: 100%; left: 12px; right: 12px; display: grid; background: #151515; border: 2px solid var(--yellow); padding: 8px; box-shadow: 0 8px 16px #0005; }
+  .mobile-site-menu > nav a { min-height: 44px; padding: 10px 12px; text-decoration: none; }
+  .mobile-site-menu > nav a:hover, .mobile-site-menu > nav a:focus-visible { background: var(--yellow); color: #050505; }
+}
+@media (max-width: 560px) {
+  .hero-grid { gap: 24px; padding: 22px 18px 28px; }
+  .hero-grid h1 { font-size: 34px; }
+  .hero-grid > div:first-child { padding-top: 0; }
+  .hero-grid > div:first-child > p:not(.eyebrow) { font-size: 16px; }
+  .hero-grid .hero-proof { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 6px; margin-top: 18px; }
+  .hero-proof span { padding: 8px 6px; font-size: 12px; }
+  .lead-panel { padding: 16px; }
+  .lead-panel h2 { font-size: 26px; }
+  .mobile-action-bar { padding-bottom: env(safe-area-inset-bottom); background: var(--yellow); }
+  body { padding-bottom: calc(59px + env(safe-area-inset-bottom)); }
+  .ahb-lead-form input, .ahb-lead-form select { scroll-margin-bottom: 130px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
