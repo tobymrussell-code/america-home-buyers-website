@@ -54,8 +54,9 @@ function setup(host,index){
   for(const name of ['email','phone','street','city','state','zip'])field(form,name).addEventListener('input',()=>{field(form,name).setCustomValidity('');field(form,name).removeAttribute('aria-invalid');form.querySelector(`[data-error="${name}"]`).textContent='';});
   let widgetId,token='',busy=false;
   const status=form.querySelector('.ahb-form-status');
+  const submitButton=form.querySelector('[type=submit]');submitButton.disabled=true;submitButton.textContent='Loading security check…';
   loadTurnstile().then(ts=>{
-    widgetId=ts.render(form.querySelector('[data-turnstile]'),{sitekey:SITEKEY,action:'seller_lead',callback:v=>{token=v;status.textContent='';},'expired-callback':()=>{token='';ts.reset(widgetId);},'error-callback':()=>{token='';status.textContent='The security check could not load. Please reload or call (336) 701-2230.';}});
+    widgetId=ts.render(form.querySelector('[data-turnstile]'),{sitekey:SITEKEY,action:'seller_lead',callback:v=>{token=v;if(!busy){status.textContent='';submitButton.disabled=false;submitButton.textContent='Get My Offer';}},'expired-callback':()=>{token='';submitButton.disabled=true;submitButton.textContent='Loading security check…';ts.reset(widgetId);},'error-callback':()=>{token='';status.textContent='The security check could not load. Please reload or call (336) 701-2230.';}});
   }).catch(e=>{status.textContent=e.message;});
   const lookup=form.querySelector('.ahb-address-lookup');
   lookup.addEventListener('click',async()=>{
