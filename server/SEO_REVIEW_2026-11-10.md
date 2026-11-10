@@ -1,0 +1,11 @@
+# Follow-up SEO and mobile checks — November 10, 2026
+
+Added 11 distinct local context sections with official planning/historic-resource links. No new market-price figures or neighborhood defect claims. Converted 15 photos to WebP: 4,633,544 original bytes to 2,575,976 bytes (44.4% reduction); preserved JPEG originals and existing photo content. Fixed eyebrow contrast on light/yellow backgrounds and light-card text on dark sections. Reworked llms.txt into linked Markdown sections. Existing forms, advertising tags, attribution and security route unchanged.
+
+Google Rich Results tests completed for the remaining 33 sitemap URLs (see SCHEMA_RESULTS_2026-11-10.json), complementing the five representative tests recorded November 9. Twenty-five of the remaining pages show valid supported items; eight normal pages show no supported rich-result items. No critical schema error reported in this remaining-URL run. Google does not support all Schema.org types as rich results.
+
+Mobile PageSpeed baseline: performance 97, accessibility 97, best practices 77, SEO 100, LCP 0.8s, CLS 0, TBT 200ms. Initial WebP/llms retest: performance 93, accessibility 97, best practices 77, SEO 100, agentic browsing 3/3, LCP 0.8s, CLS 0, TBT 310ms. This run preceded final card/CTA contrast refinements. Test scores fluctuate; no conversion or ranking lift is claimed. There is no CrUX real-user field data; INP/field Core Web Vitals cannot be certified without sufficient real traffic. Third-party cookies, script cache lifetimes and third-party work remain provider-controlled; lead collection/Turnstile/chat/ads were not disabled to improve scores.
+
+Phone-width browser checks at 390px and 320px iframe viewports: no horizontal document overflow; controls use 16px text; placeholder phone/address rejected; corrected labeled QA submission reached thank-you through the protected production route. This is browser viewport verification, not a physical iPhone/Android keyboard test. Temporary verification page removed.
+
+Search Console: account chooser shows America Home Buyers LLC (nchomebuying@gmail.com) signed out. Sitemap submission and authenticated index/CWV reports require Google sign-in. No account credential or access change made. Sitemap remains published and referenced in robots.txt.
