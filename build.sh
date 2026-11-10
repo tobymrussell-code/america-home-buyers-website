@@ -6,7 +6,7 @@ mkdir -p dist/assets/images dist/assets/logo dist/blog
 
 cp ./*.html ./styles.css ./script.js ./lead-forms.js ./lead-validation.js ./robots.txt ./sitemap.xml ./llms.txt ./_headers ./_redirects ./6b72435b05797d0873018c1731b2686e.txt dist/
 cp ./assets/logo/america-home-buyers-logo.png ./assets/logo/america-home-buyers-logo-large.png dist/assets/logo/
-cp ./assets/images/*-clean.jpg dist/assets/images/
+cp ./assets/images/*-clean.jpg ./assets/images/*-clean.webp dist/assets/images/
 
 for directory in \
   cash-home-buyers-high-point-nc \

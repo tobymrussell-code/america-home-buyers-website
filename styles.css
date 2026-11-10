@@ -1180,3 +1180,7 @@ html { scroll-padding-top: 124px; }
   .hero-grid > div:first-child > .hero-proof { order: 4; margin-top: 2px; }
   .hero-grid .hero-actions a[href^="tel:"] { display: none; }
 }
+
+/* Keep yellow brand accents readable on both light and dark panels. */
+.eyebrow { color: #806800; }
+.hero .eyebrow, .page-hero .eyebrow, .dark-section .eyebrow { color: var(--yellow); }
