@@ -1189,3 +1189,7 @@ html { scroll-padding-top: 124px; }
 .dark-section :is(.step, .card, .quote) :is(p, li) { color: #3d3d3d; }
 
 .cta-section .eyebrow { color: var(--ink); }
+
+.ahb-chat-launcher { position: fixed; right: 20px; bottom: 20px; z-index: 30; min-width: 64px; min-height: 52px; padding: 12px; border: 2px solid #050505; border-radius: 26px; background: #ffd400; color: #050505; font: 700 16px Arial,sans-serif; cursor: pointer; box-shadow: 0 2px 12px #0003; }
+.ahb-chat-launcher[hidden] { display: none; }
+@media(max-width:560px) { .ahb-chat-launcher { bottom: calc(76px + env(safe-area-inset-bottom)); right: 12px; } }
