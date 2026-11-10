@@ -1184,3 +1184,6 @@ html { scroll-padding-top: 124px; }
 /* Keep yellow brand accents readable on both light and dark panels. */
 .eyebrow { color: #806800; }
 .hero .eyebrow, .page-hero .eyebrow, .dark-section .eyebrow { color: var(--yellow); }
+
+.dark-section :is(.step, .card, .quote) { color: var(--ink); }
+.dark-section :is(.step, .card, .quote) :is(p, li) { color: #3d3d3d; }
