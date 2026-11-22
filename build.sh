@@ -28,7 +28,17 @@ for directory in \
   we-buy-houses-welcome-nc \
   we-buy-houses-archdale-nc \
   we-buy-houses-greensboro-nc \
-  we-buy-houses-thomasville-nc
+  we-buy-houses-thomasville-nc \
+  sell-vacant-house-thomasville-nc \
+  sell-inherited-house-from-out-of-state-nc \
+  sell-house-tax-foreclosure-notice-davidson-county-nc \
+  sell-mobile-home-with-land-nc \
+  sell-house-with-failed-septic-davidson-county-nc \
+  sell-house-with-unfinished-renovation-nc \
+  sell-house-with-old-roof-nc \
+  sell-house-with-foundation-problems-nc \
+  sell-house-after-buyer-financing-fell-through-nc \
+  sell-fire-damaged-house-nc-triad
 do
   cp -R "$directory" dist/
 done
