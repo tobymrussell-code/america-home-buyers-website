@@ -1201,9 +1201,6 @@ html { scroll-padding-top: 124px; }
   display: block;
   color: var(--yellow);
 }
-.as-is-plan .lead-panel {
-  scroll-margin-top: 94px;
-}
 .as-is-plan-benefits {
   display: grid;
   gap: 9px;
@@ -1240,9 +1237,61 @@ html { scroll-padding-top: 124px; }
   color: var(--black);
   font-weight: 850;
 }
-@media (max-width: 760px) {
+.as-is-plan-offer {
+  align-items: center;
+  scroll-margin-top: 94px;
+}
+.as-is-plan-hero .hero-actions {
+  margin-top: 0;
+}
+.as-is-plan-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+@media (min-width: 761px) {
+  .as-is-plan-hero {
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    column-gap: 24px;
+    row-gap: 16px;
+    padding-bottom: 60px;
+  }
+  .as-is-plan-intro {
+    grid-area: 1 / 1;
+  }
+  .as-is-plan-hero .hero-actions {
+    grid-area: 2 / 1;
+    justify-content: flex-end;
+  }
+  .as-is-plan-portrait {
+    grid-area: 2 / 2;
+    align-self: center;
+    position: relative;
+    height: 0;
+  }
+  /* The pointing hand is about one third of the way down the photo. */
+  .as-is-plan-portrait img {
+    position: absolute;
+    top: 0;
+    transform: translateY(-31%);
+  }
   .as-is-plan-benefits {
-    order: 4;
-    margin-top: 8px;
+    grid-area: 3 / 1;
+    min-height: 150px;
+    align-content: start;
+    margin-top: 0;
+  }
+}
+@media (max-width: 760px) {
+  .as-is-plan-hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+  .as-is-plan-hero .hero-actions {
+    margin: 0;
+  }
+  .as-is-plan-benefits {
+    margin-top: 0;
   }
 }
