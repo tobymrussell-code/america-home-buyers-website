@@ -1193,3 +1193,56 @@ html { scroll-padding-top: 124px; }
 .ahb-chat-launcher { position: fixed; right: 20px; bottom: 20px; z-index: 30; min-width: 64px; min-height: 52px; padding: 12px; border: 2px solid #050505; border-radius: 26px; background: #ffd400; color: #050505; font: 700 16px Arial,sans-serif; cursor: pointer; box-shadow: 0 2px 12px #0003; }
 .ahb-chat-launcher[hidden] { display: none; }
 @media(max-width:560px) { .ahb-chat-launcher { bottom: calc(76px + env(safe-area-inset-bottom)); right: 12px; } }
+
+.as-is-plan .hero {
+  background: radial-gradient(ellipse at 16% 12%, #30290d 0%, var(--black) 55%);
+}
+.as-is-plan h1 span {
+  display: block;
+  color: var(--yellow);
+}
+.as-is-plan .lead-panel {
+  scroll-margin-top: 94px;
+}
+.as-is-plan-benefits {
+  display: grid;
+  gap: 9px;
+  margin: 24px 0 0;
+  padding-left: 1.3em;
+  color: #fff9c9;
+  font-weight: 700;
+}
+.as-is-plan-benefits li::marker {
+  color: var(--yellow);
+}
+.as-is-plan-process {
+  border-top: 1px solid #ddd6b8;
+}
+.as-is-plan-process ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: plan-step;
+}
+.as-is-plan-process li {
+  counter-increment: plan-step;
+  border-left: 4px solid var(--yellow);
+  padding: 12px 18px;
+}
+.as-is-plan-process li::before {
+  content: counter(plan-step);
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 12px;
+  background: var(--yellow);
+  color: var(--black);
+  font-weight: 850;
+}
+@media (max-width: 760px) {
+  .as-is-plan-benefits {
+    order: 4;
+    margin-top: 8px;
+  }
+}

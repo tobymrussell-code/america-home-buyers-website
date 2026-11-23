@@ -9,6 +9,7 @@ cp ./assets/logo/america-home-buyers-logo.png ./assets/logo/america-home-buyers-
 cp ./assets/images/*-clean.jpg ./assets/images/*-clean.webp dist/assets/images/
 
 for directory in \
+  as-is-selling-plan \
   cash-home-buyers-high-point-nc \
   can-i-leave-belongings-when-selling-house \
   can-i-sell-house-as-is-nc \
